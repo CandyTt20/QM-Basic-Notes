@@ -25,9 +25,24 @@ $$
 
 #### Secondary Quantization 
 
-For an arbitrary many-body operator $\sum_iA_i$ , the creation-annihilation expression is
+For an arbitrary many-body operator $\sum_i\hat{A}_i$ , the creation-annihilation expression is
 $$
-\sum_i\hat{A}_i
+\sum_i\hat{A}_i=\int_{xy} \psi^\dagger(x)A_{xy}\psi(y)
+$$
+
+where $A_{k_1k_2}$ is the matrix element of states $x$ and $y$ . 
+
+Let's calculate the matrix of current operator 
+$$
+\begin{align}
+\langle x_1| j(x)|x_2\rangle&=\frac{e}{2 m}\left[\langle x_1 | x\rangle\langle x|\hat{p}| x_2\rangle+\left\langle x_1\left|\hat{p}^{\dagger}\right| x\right\rangle\langle x | x_2\rangle\right]\\&=\frac{e}{2m}\left(\delta(x_1-x_2)\frac{\hbar}{i}\frac{\partial\delta(x-x_2)}{\partial(x-x_2)}+\frac{\hbar}{i}\frac{\partial\delta(x_1-x)}{\partial (x_1-x}\delta(x-x_2)\right)
+\end{align}
+$$
+Substituting to the secondary quantitation expression, one finds that
+$$
+\begin{align}
+j(x)&=\frac{e\hbar}{2mi}\int_{x_1x_2}\psi^\dagger(x_1)\left(\delta(x_1-x_2)\frac{\hbar}{i}\frac{\partial\delta(x-x_2)}{\partial(x-x_2)}+\frac{\hbar}{i}\frac{\partial\delta(x_1-x)}{\partial (x_1-x}\delta(x-x_2)\right)\psi(x_2)\\&=\frac{e\hbar}{2mi}[\psi^\dagger(x)\partial_x\psi(x)-\psi(x)\partial_x\psi^\dagger(x)]
+\end{align}
 $$
 
 
