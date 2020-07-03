@@ -46,5 +46,5 @@ j(x)&=\frac{e\hbar}{2mi}\int_{x_1x_2}\psi^\dagger(x_1)\left(\delta(x_1-x_2)\frac
 $$
 
 
-#### Momentum Space
+#### Transform to Momentum Space
 
